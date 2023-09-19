@@ -9,6 +9,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
+//자바 빈
 @Getter @Setter
 @ToString
 @NoArgsConstructor

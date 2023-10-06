@@ -63,7 +63,7 @@ public class ScoreJdbcRepository implements IScoreRepository {
 			 rs =  pstmt.executeQuery();  
 			
 			while(rs.next()) { //조회된 행이 하나라도 존재한다면 true, 존재하지 않는다면 false.
-				//타겟으로 잡힌 행의 데이터를 얻어옵니다.
+				//타겟으로 잡힌 행의 데이터를 얻어옵니다.  next() 메서드는 Select 쿼리문의 결과값의 존재 여부를 확인
 				Score s = new Score(
 							rs.getInt("stu_num"),
 							rs.getString("stu_name"),
@@ -156,6 +156,7 @@ public class ScoreJdbcRepository implements IScoreRepository {
 			String sql = "DELETE FROM score WHERE stu_num = ?";
 			
 			conn = DriverManager.getConnection(url, username, password);
+			//conn.setAutoCommit(false);
 			
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setInt(1, stuNum);
@@ -163,8 +164,10 @@ public class ScoreJdbcRepository implements IScoreRepository {
 			int rs = pstmt.executeUpdate();
 			if(rs == 1) {
 				System.out.println("DELETE 성공!");
+				//conn.commit();
 			} else {
 				System.out.println("DELETE 실패!");
+				//conn.rollback();
 			}
 			
 			
@@ -180,12 +183,12 @@ public class ScoreJdbcRepository implements IScoreRepository {
 			}
 		}
 		
-		//5.executeupdate 사용
+		
 	}
 
 	@Override
 	public void modify(Score modScore) {
-		// TODO Auto-generated method stub
+			
 
 	}
 

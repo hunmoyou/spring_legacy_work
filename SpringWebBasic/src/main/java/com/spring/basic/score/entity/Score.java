@@ -24,9 +24,9 @@ import lombok.ToString;
 @AllArgsConstructor
 public class Score {
 	
-	private int stuNum; //학번
-	private String stuName; //학생 이름
-	private int kor, eng, math; // 국, 영, 수 점수
+	private int stuNum; //학번    sql: stu_num
+	private String stuName; //학생 이름   sql: stu_name
+	private int kor, eng, math; // 국, 영, 수 점수 
 	
 	private int total; //총점
 	private double average; //평균

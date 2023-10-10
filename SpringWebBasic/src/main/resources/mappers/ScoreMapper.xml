@@ -47,6 +47,8 @@
 		total=#{total}, average=#{average}, grade=#{grade}
 		WHERE stu_num=#{stuNum}
 	</update>
+	
+	
 </mapper>
 
 

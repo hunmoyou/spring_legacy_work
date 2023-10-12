@@ -34,20 +34,20 @@ public class FreeBoardMapperTest {
 		//given - when - then 패턴을 따릅니다. (권장 사항) 데이터세팅 - 테스트 가정 - 결과 확인
 		
 		//given: 테스트를 위해 주어질 데이터 세팅(parameter) - 지금은 생략
-//		for(int i=1; i<=10; i++) {
-//			//when: 테스트 실제 상황 세팅
-//				mapper.regist(FreeBoard.builder()
-//										.title("테스트 제목 " + i)
-//										.writer("abc1234")
-//										.content("테스트 내용입니다. " + i)
-//										.build());
-//		}
+		for(int i=1; i<=300; i++) {
+			//when: 테스트 실제 상황 세팅
+				mapper.regist(FreeBoard.builder()
+										.title("페이징 테스트 제목 " + i)
+										.writer("page1234")
+										.content("테스트 내용입니다. " + i)
+										.build());
+		}
 		
-		mapper.regist(FreeBoard.builder()
-				.title("메롱메롱" )
-				.writer("kim1234")
-				.content("테스트 중이니까 조용." )
-				.build());
+//		mapper.regist(FreeBoard.builder()
+//				.title("메롱메롱" )
+//				.writer("kim1234")
+//				.content("테스트 중이니까 조용." )
+//				.build());
 		
 		//then: 테스트 결과를 확인.
 		

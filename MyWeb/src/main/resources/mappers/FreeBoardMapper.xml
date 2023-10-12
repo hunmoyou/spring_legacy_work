@@ -16,6 +16,12 @@
 		SELECT * FROM freeboard
 	</select>
 
+	<select id="getTotal" resultType="int" >
+		SELECT COUNT(*)
+		FROM freeboard
+	</select>
+	
+
 	<select id="getContent" resultType="freeboard">
 		SELECT * FROM freeboard
 		WHERE bno = #{bno}
@@ -33,6 +39,8 @@
 		DELETE FROM freeboard
 		WHERE bno = #{bno}
 	</delete>
+	
+	
 	
 	
 </mapper>

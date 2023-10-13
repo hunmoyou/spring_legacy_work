@@ -1,4 +1,4 @@
-package com.spring.myweb.freeboard.dto;
+package com.spring.myweb.freeboard.dto.response;
 
 import com.spring.myweb.freeboard.entity.FreeBoard;
 

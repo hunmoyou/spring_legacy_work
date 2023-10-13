@@ -1,4 +1,4 @@
-package com.spring.myweb.freeboard.dto;
+package com.spring.myweb.freeboard.dto.response;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;

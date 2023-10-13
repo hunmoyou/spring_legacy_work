@@ -18,7 +18,7 @@ import org.springframework.web.context.WebApplicationContext;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.spring.myweb.freeboard.controller.FreeBoardController;
-import com.spring.myweb.freeboard.dto.FreeDetailResponseDTO;
+import com.spring.myweb.freeboard.dto.response.FreeDetailResponseDTO;
 
 @ExtendWith(SpringExtension.class)
 @ContextConfiguration(locations= {"file:src/main/webapp/WEB-INF/spring/root-context.xml",

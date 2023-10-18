@@ -10,7 +10,7 @@
                             <p>상세보기</p>
                         </div>
                         
-                        <form action="/myweb/freeboard/modPage" method="post">
+                        <form action="${pageContext.request.contextPath}/freeboard/modPage" method="post">
                             <div>
                                 <label>DATE</label>
                                 <p>${article.date}</p>
@@ -34,7 +34,7 @@
                             </div>
 
                             <button type="submit" class="btn btn-primary">변경</button>
-                            <button type="button" class="btn btn-dark" onclick="location.href='/myweb/freeboard/freeList?pageNo=${p.pageNo}&amount=${p.amount}&keyword=${p.keyword}&condition=${p.condition}'">목록</button>
+                            <button type="button" class="btn btn-dark" onclick="location.href='${pageContext.request.contextPath}/freeboard/freeList?pageNo=${p.pageNo}&amount=${p.amount}&keyword=${p.keyword}&condition=${p.condition}'">목록</button>
                     </form>
                 </div>
             </div>
@@ -47,7 +47,7 @@
                     <div class="col-xs-12 col-md-9 write-wrap">
                         <form class="reply-wrap">
                             <div class="reply-image">
-                                <img src="../resources/img/profile.png">
+                                <img src="${pageContext.request.contextPath}/img/profile.png">
                             </div>
                             <!--form-control은 부트스트랩의 클래스입니다-->
 	                    <div class="reply-content">
@@ -68,7 +68,7 @@
                         <div id="replyList">
                         <div class='reply-wrap'>
                             <div class='reply-image'>
-                                <img src='../resources/img/profile.png'>
+                                <img src='${pageContext.request.contextPath}/img/profile.png'>
                             </div>
                             <div class='reply-content'>
                                 <div class='reply-group'>

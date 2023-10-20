@@ -25,7 +25,7 @@ public class ReplyListResponseDTO {
 		if(reply.getUpdateDate() == null) {
 			this.date = makePrettierDateString(reply.getReplyDate());
 		}else {
-			this.date = makePrettierDateString(reply.getUpdateDate()) + "(수정됨)";
+			this.date = makePrettierDateString(reply.getUpdateDate()) + " (수정됨)";
 		}
 	}
 	

@@ -14,14 +14,14 @@ import lombok.ToString;
 @EqualsAndHashCode
 @NoArgsConstructor
 @AllArgsConstructor
-public class ReplyRegistDTO {
+public class ReplyRequestDTO {
 	
 	private int bno;
 	private String replyText;
 	private String replyId;
 	private String replyPw;
 	
-	public Reply toEntiy(ReplyRegistDTO dto) {
+	public Reply toEntiy(ReplyRequestDTO dto) {
         return Reply.builder()
                 .bno(dto.getBno())
                 .replyText(dto.getReplyText())

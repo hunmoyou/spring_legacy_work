@@ -175,6 +175,12 @@ public class SnsBoardController {
 		return service.searchLike(params);
 	}
 	
+	//회원이 글 목록으로 진입 시 좋아요 게시물 리스트 체크
+	@GetMapping("/likeList/{userId}")
+	public List<Integer> likeList(@PathVariable String userId) {
+		log.info("/snsboard/likeList: GET, userId: {}", userId);
+		return service.likeList(userId);
+	}
 	
 	
 }
